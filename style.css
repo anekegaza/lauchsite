@@ -945,6 +945,7 @@ nav {
   /* MEET MENTORS */
   .meet-mentors-area {
     flex-direction: column;
+    text-align: center;
   }
   .meeth2a {
     display: none;
