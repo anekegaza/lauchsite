@@ -963,10 +963,14 @@ nav {
     grid-template-columns: repeat(1, 1fr);
   }
  .oga {
-    width: 400px;
+    width: 350px;
     transition: all 0.5s ease-in;
     border-radius: 10px;
     transition: all 0.5s ease-in;
+  }
+  .oga:hover {
+    width: 350px;
+    border-radius: 10px;
   }
   .card,
   .front-card,
