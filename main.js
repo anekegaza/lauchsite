@@ -49,10 +49,6 @@ $(function () {
 const goBtn = document.querySelector(".go-btn");
 const backBtn = document.querySelector(".back-btn");
 
-goBtn.addEventListener("click", () => {
-  goBtn.classList.toggle("flipped");
-});
-
 let counter = 0;
 show(counter);
 
