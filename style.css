@@ -819,7 +819,7 @@ nav {
 /* ======== SETING IT UP FOR RESPONSIVENESS ========== */
 @media (max-width: 767px) {
   .container {
-    max-width: 500px;
+    max-width: 90vw;
     overflow: hidden;
     margin: 0 1.5rem;
   }
