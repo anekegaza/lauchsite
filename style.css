@@ -962,9 +962,17 @@ nav {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
-  .oga {
+ .oga {
     width: 400px;
     transition: all 0.5s ease-in;
+    width: 350px;
+    border-radius: 10px;
+    transition: all 0.5s ease-in;
+  }
+  .card,
+  .front-card,
+  .back-card {
+    border-radius: 10px;
   }
   .oga .card h3 {
     display: none;
@@ -1023,8 +1031,8 @@ nav {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    width: 60%;
-    margin-left: 100px;
+    margin-left: 150px;
+    width: 50%;
   }
   .box-text h2 {
     font-size: 27px;
