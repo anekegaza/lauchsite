@@ -574,8 +574,9 @@ nav {
 }
 .user-img {
   width: 75px;
+  height: 75px;
   /* padding: 5px; */
-  border-radius: 48%;
+  border-radius: 50%;
   background-color: var(--main-Yellow);
   margin: 5px;
   cursor: pointer;
@@ -588,6 +589,7 @@ nav {
   transform: scale(1.1);
   /* margin: 0 5px; */
   width: 100px;
+  height: 100px;
   transition: 0.5s all ease;
 }
 
