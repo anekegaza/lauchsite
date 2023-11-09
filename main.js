@@ -46,6 +46,24 @@ $(function () {
   });
 });
 
+
+// remove  and switch the active mentor class
+const ogas = document.querySelectorAll(".oga");
+
+ogas.forEach((oga) => {
+  oga.addEventListener("click", () => {
+    removeActiveClasses();
+    oga.classList.add("active-mentor");
+  });
+});
+
+const removeActiveClasses = () => {
+  ogas.forEach((oga) => {
+    oga.classList.remove("active-mentor");
+  });
+};
+
+// TEXTS TESTIMONIALS
 const goBtn = document.querySelector(".go-btn");
 const backBtn = document.querySelector(".back-btn");
 
