@@ -209,7 +209,7 @@ nav {
   text-align: left;
   line-height: 1.5;
   background-color: var(--light-grey);
-  padding: 20px;
+  padding: 60px 20px;
   border-radius: 5px;
 }
 .overview-card img {
@@ -265,7 +265,7 @@ nav {
   background-position: center;
   background-size: cover;
   position: relative;
-  transition: all ease-in 0.5s;
+  transition: all ease-in 0.3s;
 }
 
 .oga-1 {
@@ -280,7 +280,20 @@ nav {
   background-position: center;
   background-size: cover;
   position: relative;
-  transition: all ease-in 0.5s;
+  transition: all ease-in 0.3s;
+}
+.oga-oga {
+  width: 200px;
+  height: 500px;
+  border-radius: 10px;
+  color: var(--main-white);
+  background-color: var(--main-purple);
+  background-image: url(./Images/Feyi\ 1.png), url(./Images/Vector\ 2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition: all ease-in 0.3s;
 }
 .oga-2 {
   width: 200px;
@@ -293,17 +306,21 @@ nav {
   background-position: center;
   background-size: cover;
   position: relative;
-  transition: all ease-in 0.5s;
+  transition: all ease-in 0.2s;
 }
-.oga:hover {
+.oga.active-mentor {
   width: 400px;
   border-radius: 10px;
 }
-
-.oga:hover .front-card {
-  display: block;
+.oga.active-mentor > .card h3 {
+  display: none;
 }
-.oga:hover .back-card {
+.oga.active-mentor > .card .gradient {
+  height: 40%;
+  opacity: 0.8;
+}
+.active-mentor .front-card,
+.active-mentor .back-card {
   display: block;
 }
 .card {
@@ -314,6 +331,8 @@ nav {
   transition: all 0.5s linear;
   border-radius: 10px;
   cursor: pointer;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 .gradient {
   position: absolute;
@@ -325,10 +344,7 @@ nav {
   width: 100%;
   border-radius: 10px;
 }
-.card:hover .gradient {
-  height: 30%;
-  opacity: 0.7;
-}
+
 .card h3 {
   display: block;
   position: absolute;
@@ -337,12 +353,9 @@ nav {
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   z-index: 6;
-  transition: all 0.3;
+  transition: all 0.2s ease;
 }
-.card:hover h3 {
-  display: none;
-  border-radius: 10px;
-}
+
 .front-card {
   position: absolute;
   width: 100%;
@@ -354,7 +367,9 @@ nav {
   z-index: 4;
   display: none;
   border-radius: 10px;
+  backface-visibility: hidden;
 }
+
 .front-card-1 {
   position: absolute;
   width: 100%;
@@ -380,8 +395,21 @@ nav {
   display: none;
   border-radius: 10px;
 }
-.front-card .go-btn,
-.back-card .back-btn {
+.go-btn {
+  display: inline;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  color: var(--main-white);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+.go-btn:checked {
+  transform: rotateY("-180deg");
+}
+.back-btn {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -437,14 +465,15 @@ nav {
 }
 .front-card,
 .back-card {
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .flipped,
 .hovercard:hover {
   transform: rotateY(180deg);
+  transition: 0.1s rotateY;
+  animation: moveup 0.5s linear forwards;
 }
-
 /* =============================================== */
 
 /* testin the testimonial section */
@@ -970,6 +999,9 @@ nav {
     border-radius: 10px;
     transition: all 0.5s ease-in;
   }
+  .oga.active-mentor {
+    width: 350px;
+  }
   .oga:hover {
     width: 350px;
     border-radius: 10px;
@@ -1025,7 +1057,7 @@ nav {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     /* gap: 10px; */
-    width: 80%;
+    width: 90%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
