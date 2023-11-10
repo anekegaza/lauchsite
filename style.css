@@ -50,7 +50,7 @@ section {
   font-size: 15px;
   font-weight: 700;
   padding: 20px 50px;
-  border-radius: 5px;
+  border-radius: 14px;
   color: var(--main-black);
   display: inline-block;
 }
